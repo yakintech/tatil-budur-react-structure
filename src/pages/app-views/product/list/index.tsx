@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { ProductService } from '../../../../network/services/product/ProductService'
 import { ProductVM } from '../../../../models/product'
+import { ulStyle } from './style'
 
 function List() {
 
@@ -36,7 +37,8 @@ function List() {
 
 
   return (<>
-    <ul>
+  <h1>Product List</h1>
+    <ul style={ulStyle}>
       {
         products.map(item => <li key={item.id}>{item.name} - {item.unitPrice}</li>)
       }

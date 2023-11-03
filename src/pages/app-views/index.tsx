@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Product from './product'
+import Home from './home'
 
 function AppViews() {
   return (<>
@@ -8,6 +9,10 @@ function AppViews() {
         <Route
             path='/product/*'
             element={<Product/>}
+        />
+          <Route
+            path='/home/*'
+            element={<Home/>}
         />
     </Routes>
   </>
